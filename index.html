@@ -10,12 +10,13 @@
   <body>
     <div class="container">
       <header>
-        <form>
+        <form id="search-form">
           <div class="form-group">
             <input
               type="search"
               for="city"
-              id="city"
+              id="search-input"
+              class="search-input"
               placeholder="Enter a city..."
             />
             <input type="submit" value="Search" id="search" />
@@ -24,18 +25,20 @@
       </header>
       <main>
         <div class="current-weather">
-          <h1 id="search-city">Sydney</h1>
+          <h1 class="current-city" id="current-city">Sydney</h1>
 
           <ul>
-            <li><span id="current-time">Saturday 19:56</span>, few clouds</li>
+            <li><span id="current-date">Saturday 19:56</span>, few clouds</li>
             <li>
               Humidity: <span class="values">87%</span>, Wind:
               <span class="values">4.12km/h</span>
             </li>
           </ul>
-          <span class="current-temp"
-            >🌥️<strong> 14<sup>&deg;</sup>C </strong></span
-          >
+          <div class="current-temp">
+          <span class="current-temperature-icon">🌥️</span>
+           <span class="current-temperature-value"> <strong> 14</strong></span>
+            <span class="current-temperature-unit"><sup>&deg;</sup>C </strong></span>
+            </div>
         </div>
         <hr />
         <div class="forecast-weather">
